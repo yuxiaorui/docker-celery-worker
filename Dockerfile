@@ -6,7 +6,7 @@ RUN (echo "deb http://mirrors.ustc.edu.cn/debian/ jessie main contrib non-free" 
 RUN apt-get update
 RUN apt-get install -y python python-pip python-dev libxml2-dev libxslt-dev libffi-dev libssl-dev supervisor libmysqld-dev
 
-RUN pip install lxml && pip install pyopenssl && pip install mysql && pip install 'MySQL-python<=1.2.3' && pip install leancloud-sdk && pip install Celery && pip install random 
+RUN pip install lxml && pip install pyopenssl && pip install mysql && pip install 'MySQL-python<=1.2.3' && pip install leancloud-sdk && pip install Celery 
 
 VOLUME ["/opt/celery/worker"]
 WORKDIR /opt/celery/worker
