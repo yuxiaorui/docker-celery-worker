@@ -36,7 +36,8 @@ RUN pip install lxml \
  && pip install Celery \
  && pip install sqlalchemy \
  && pip install pymongo \
- && pip install pandas
+ && pip install pandas \
+ && pip install Scrapy
 
 VOLUME ["/opt/celery/worker"]
 WORKDIR /opt/celery/worker
