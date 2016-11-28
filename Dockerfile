@@ -28,16 +28,25 @@ RUN set -x \
 	' \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir virtualenv
-RUN pip install lxml \
- && pip install pyopenssl \
- && pip install mysql \
- && pip install 'MySQL-python<=1.2.3' \
- && pip install leancloud-sdk \
+RUN pip install 'MySQL-python<=1.2.3' \
  && pip install Celery \
- && pip install sqlalchemy \
- && pip install pymongo \
+ && pip install leancloud-sdk \
+ && pip install lxml \
+ && pip install mysql \
+ && pip install numexpr \
+ && pip install numpy \
  && pip install pandas \
- && pip install Scrapy
+ && pip install pymongo \
+ && pip install pyopenssl \
+ && pip install qingcloud-sdk \
+ && pip install redis \
+ && pip install scikit-learn \
+ && pip install SciPy \
+ && pip install Scrapy \
+ && pip install scrapy_redis \
+ && pip install sqlalchemy \
+ && pip install twisted \
+ && pip install xlsxwriter
 
 VOLUME ["/opt/celery/worker"]
 WORKDIR /opt/celery/worker
