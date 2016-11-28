@@ -28,11 +28,12 @@ RUN set -x \
 	' \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir virtualenv
-RUN pip install 'MySQL-python<=1.2.3' \
- && pip install Celery \
+RUN pip install Celery~=3.1.24 \
+ && pip install kombu~=3.0.37 \
  && pip install leancloud-sdk \
  && pip install lxml \
  && pip install mysql \
+ && pip install MySQL-python==1.2.5 \
  && pip install numexpr \
  && pip install numpy \
  && pip install pandas \
