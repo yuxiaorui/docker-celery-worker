@@ -28,8 +28,8 @@ RUN set -x \
 	' \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir virtualenv
-RUN pip install Celery~=3.1.24 \
- && pip install kombu~=3.0.37 \
+RUN pip install Celery==3.1.23 \
+ && pip install kombu==3.0.35 \
  && pip install leancloud-sdk \
  && pip install lxml \
  && pip install mysql \
